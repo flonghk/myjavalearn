@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<configuration>  
+<configuration scan="true" scanPeriod="60 seconds" debug="false">  
   
     <!-- ch.qos.logback.core.ConsoleAppender 控制台输出 -->  
     <appender name="console" class="ch.qos.logback.core.ConsoleAppender">  
@@ -15,13 +14,14 @@
         <Encoding>UTF-8</Encoding>  
         <File>log/learn.log</File>  
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">  
-            <FileNamePattern>log/learn-%d{yyyy-MM-dd}.log  
+            <FileNamePattern>log/learn%d{yyyy-MM-dd}.log  
             </FileNamePattern>  
             <MaxHistory>10</MaxHistory>  
-            <TimeBasedFileNamingAndTriggeringPolicy  
+            <!--  <TimeBasedFileNamingAndTriggeringPolicy  
                 class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">  
                 <MaxFileSize>5MB</MaxFileSize>  
             </TimeBasedFileNamingAndTriggeringPolicy>  
+            -->
         </rollingPolicy>  
         <layout class="ch.qos.logback.classic.PatternLayout">  
             <pattern>[%-5level] %d{yyyy-mm-dd HH:mm:ss.SSS} [%thread] %logger{36} - %msg%n  
