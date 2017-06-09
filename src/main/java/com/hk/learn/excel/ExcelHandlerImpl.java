@@ -244,7 +244,7 @@ public String ReplaceChineseChar(String str){
 */
 	public static void main(String[] args) throws Exception {
 
-		String path = "D:/hkjmeter/corpflightmsgtest/target/test-classes/ctripcorp/hermes/FlightNotifyRequest.xlsx";
+		String path = "D:/hkjmeter/FlightNotifyRequest.xlsx";
 
 		List testExcels = new ExcelHandlerImpl().transferExcel(path);
 		getRowCount();
