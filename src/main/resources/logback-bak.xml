@@ -1,0 +1,245 @@
+<configuration scan="true" scanPeriod="60 seconds" debug="false">
+	<contextName>automation</contextName>
+	<appender name="automation"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>logs/automationlog.log</file>
+		<filter class="ch.qos.logback.classic.filter.LevelFilter">  
+            <level>INFO</level>  
+            <onMatch>ACCEPT</onMatch>  
+            <onMismatch>DENY</onMismatch>  
+        </filter> 
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>logs/automationlog.%d{yyyy-MM-dd}.log
+			</fileNamePattern>
+			<maxHistory>10</maxHistory>
+		</rollingPolicy>
+		<encoder>
+			<pattern>%date %-5level [%thread] %logger{72}[%line] %msg%n
+			</pattern>
+			<charset>utf-8</charset>
+		</encoder>
+	</appender>
+	
+	<appender name="api"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>logs/api-log.log</file>
+		<filter class="ch.qos.logback.classic.filter.LevelFilter">  
+            <level>INFO</level>  
+            <onMatch>ACCEPT</onMatch>  
+            <onMismatch>DENY</onMismatch>  
+        </filter> 
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>logs/api-log.%d{yyyy-MM-dd}.log
+			</fileNamePattern>
+			<maxHistory>10</maxHistory>
+		</rollingPolicy>
+		<encoder>
+			<pattern>%date %-5level [%thread] %logger{72}[%line] %msg%n
+			</pattern>
+			<charset>utf-8</charset>
+		</encoder>
+	</appender>
+	
+	<appender name="CorpPrintTicketTest"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>logs/CorpPrintTicketTest-log.log</file>
+		<filter class="ch.qos.logback.classic.filter.LevelFilter">  
+            <level>INFO</level>  
+            <onMatch>ACCEPT</onMatch>  
+            <onMismatch>DENY</onMismatch>  
+        </filter> 
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>logs/CorpPrintTicketTest-log.%d{yyyy-MM-dd}.log
+			</fileNamePattern>
+			<maxHistory>10</maxHistory>
+		</rollingPolicy>
+		<encoder>
+			<pattern>%date %-5level [%thread] %logger{72}[%line] %msg%n
+			</pattern>
+			<charset>utf-8</charset>
+		</encoder>
+	</appender>
+
+	<appender name="hermestest"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>logs/hermestest-log.log</file>
+		<filter class="ch.qos.logback.classic.filter.LevelFilter">  
+            <level>INFO</level>  
+            <onMatch>ACCEPT</onMatch>  
+            <onMismatch>DENY</onMismatch>  
+        </filter> 
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>logs/hermestest-log.%d{yyyy-MM-dd}.log
+			</fileNamePattern>
+			<maxHistory>10</maxHistory>
+		</rollingPolicy>
+		<encoder>
+			<pattern>%date %-5level [%thread] %logger{72}[%line] %msg%n
+			</pattern>
+			<charset>utf-8</charset>
+		</encoder>
+	</appender>
+		
+	<appender name="excel"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>logs/excel-log.log</file>
+		<filter class="ch.qos.logback.classic.filter.LevelFilter">  
+            <level>INFO</level>  
+            <onMatch>ACCEPT</onMatch>  
+            <onMismatch>DENY</onMismatch>  
+        </filter> 
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>logs/excel-log.%d{yyyy-MM-dd}.log
+			</fileNamePattern>
+			<maxHistory>10</maxHistory>
+		</rollingPolicy>
+		<encoder>
+			<pattern>%date %-5level [%thread] %logger{72}[%line] %msg%n
+			</pattern>
+			<charset>utf-8</charset>
+		</encoder>
+	</appender>
+	
+	<appender name="report"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>logs/report-log.log</file>
+		<filter class="ch.qos.logback.classic.filter.LevelFilter">  
+            <level>INFO</level>  
+            <onMatch>ACCEPT</onMatch>  
+            <onMismatch>DENY</onMismatch>  
+        </filter> 
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>logs/report-log.%d{yyyy-MM-dd}.log
+			</fileNamePattern>
+			<maxHistory>10</maxHistory>
+		</rollingPolicy>
+		<encoder>
+			<pattern>%date %-5level [%thread] %logger{72}[%line] %msg%n
+			</pattern>
+			<charset>utf-8</charset>
+		</encoder>
+	</appender>
+	
+	<appender name="utils"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>logs/utils-log.log</file>
+		<filter class="ch.qos.logback.classic.filter.LevelFilter">  
+            <level>INFO</level>  
+            <onMatch>ACCEPT</onMatch>  
+            <onMismatch>DENY</onMismatch>  
+        </filter> 
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>logs/utils-log.%d{yyyy-MM-dd}.log
+			</fileNamePattern>
+			<maxHistory>10</maxHistory>
+		</rollingPolicy>
+		<encoder>
+			<pattern>%date %-5level [%thread] %logger{72}[%line] %msg%n
+			</pattern>
+			<charset>utf-8</charset>
+		</encoder>
+	</appender>
+	
+	<appender name="Console" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder><!-- %date %-5level [%thread] %logger{72} [%file:%line] %msg%n -->
+			<pattern>%date %-5level [%thread] %logger{72}[%line] %msg%n
+			</pattern>
+		</encoder>
+	</appender>
+<!--  
+	<appender name="CentralLogging"
+		class="com.ctrip.framework.clogging.agent.appender.CLoggingTagAppender">
+		<appId>921002</appId>
+		<serverIp>collector.logging.uat.qa.nt.ctripcorp.com</serverIp>-->
+		<!--如果是生产环境，请换成相应的地址:collector.logging.sh.ctriptravel.com -->
+		<!--<serverPort>63100</serverPort>
+	</appender>
+-->	
+<!--	
+	<logger name="com.ctrip.framework.clogging" level="debug"
+		additivity="false">
+		<appender-ref ref="automation" />
+	</logger>
+
+	<logger name="ch.qos" level="debug" additivity="false">
+		<appender-ref ref="automation" />
+	</logger>
+  
+	<logger name="com.ctrip.cap.device" level="info">
+		<appender-ref ref="Device" />
+		<appender-ref ref="CentralLogging"></appender-ref>
+	</logger>
+	-->
+
+<!-- 	<logger name="com.ctrip.cap.common" level="debug" additivity="false">
+		<appender-ref ref="Cap" />
+		<appender-ref ref="CentralLogging"></appender-ref>
+	</logger>
+
+	<logger name="com.ctrip.cap.internal" level="debug" additivity="false">
+		<appender-ref ref="Cap" />
+		<appender-ref ref="CentralLogging"></appender-ref>
+	</logger>
+
+	<logger name="com.ctrip.cap.monitor" level="debug" additivity="false">
+		<appender-ref ref="Cap" />
+		<appender-ref ref="CentralLogging"></appender-ref>
+	</logger>
+
+	<logger name="com.ctrip.cap.internal.performance" level="debug"
+		additivity="false">
+		<appender-ref ref="Performence" />
+	</logger>
+
+	<logger name="com.ctrip.cap.internal.appium" level="info">
+		<appender-ref ref="Cap" />
+		<appender-ref ref="CentralLogging"></appender-ref>
+		<appender-ref ref="Console" />
+	</logger>
+ -->
+ <!--  
+	<logger name="com.ctrip.cap" level="info">
+		<appender-ref ref="Console" />
+		<appender-ref ref="Cap" />
+		<appender-ref ref="CentralLogging"></appender-ref>
+	</logger>
+-->	
+<!-- 	<logger name="org.apache.http" level="debug">
+		<appender-ref ref="Console"></appender-ref>
+	</logger>
+	 -->
+
+<!-- <logger additivity="false"控制是否输出到控制台
+-->	
+	<logger name="com.ctrip.corp.api" level="DEBUG">  
+    	<appender-ref ref="api" />  
+	</logger>  
+  
+	<logger name="com.ctrip.corp.CorpPrintTicketTest" level="DEBUG">  
+    	<appender-ref ref="CorpPrintTicketTest" />  
+	</logger>
+	
+	<logger name="com.ctrip.corp.hermestest" level="DEBUG">  
+    	<appender-ref ref="hermestest" />  
+	</logger>
+	
+	<logger name="com.ctrip.corp.excel" level="DEBUG">  
+    	<appender-ref ref="excel" />  
+	</logger>
+	
+	<logger name="com.ctrip.corp.report" level="DEBUG">  
+    	<appender-ref ref="report" />  
+	</logger>
+	
+	<logger name="com.ctrip.corp.utils" level="DEBUG">  
+    	<appender-ref ref="utils" />  
+	</logger>
+	
+	<root level="debug">
+		<appender-ref ref="automation" />
+	</root> 
+	<root level="debug">
+		<appender-ref ref="Console" />
+	</root> 
+
+</configuration>
