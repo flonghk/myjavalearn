@@ -9,7 +9,7 @@ import org.apache.http.entity.ContentType;
 
 /**
  * for some reasons Http tend to use ios-8859-1 encoding as default ,this is
- * just a convenient way for ctrip beginners,!
+ * just a convenient way for beginners,!
  * 
  * @author 
  *

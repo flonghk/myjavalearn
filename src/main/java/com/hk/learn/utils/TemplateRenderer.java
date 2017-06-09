@@ -4,8 +4,8 @@ import java.io.IOException;
 import java.io.StringWriter;
 import java.util.List;
 
-import com.ctrip.corp.dataprovider.TestData;
-//import com.ctrip.cap.exception.DataPrepareException;
+import com.hk.learn.dataprovider.TestData;
+
 import com.google.gson.Gson;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonParser;

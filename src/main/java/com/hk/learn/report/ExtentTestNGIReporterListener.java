@@ -218,7 +218,7 @@ public class ExtentTestNGIReporterListener implements IReporter{
                 }else{
                     name = result.getMethod().getMethodName();
                 }
-                //针对	com.ctrip.corp.CorpPrintTicketTest.OrderAuthHandleDetail@317e9c3c
+                //针对
                 //提取日志第一条记录 赋值给name
                 List<String> outputLogList = Reporter.getOutput(result);
                 if (name.contains("OrderAuthHandleDetail"))
