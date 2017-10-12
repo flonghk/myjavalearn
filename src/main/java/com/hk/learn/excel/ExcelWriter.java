@@ -1,27 +1,20 @@
 package com.hk.learn.excel;
 
+import org.apache.poi.poifs.filesystem.POIFSFileSystem;
+import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
-
-import org.apache.poi.ss.usermodel.Cell;
-import org.apache.poi.ss.usermodel.DateUtil;
-import org.apache.poi.ss.usermodel.Row;
-
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.util.Collection;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
-import java.util.Map;
 import java.util.Set;
-
-import org.apache.poi.poifs.filesystem.POIFSFileSystem;
 
 public class ExcelWriter {
 	Workbook wb ;
@@ -201,7 +194,7 @@ public class ExcelWriter {
          wb.write(os);
          os.close();
     }
-
+/*
 	public void CreateExcelFileFromOrderAuthHandleDetail(String fullFilePath, String sheetName,List<OrderAuthHandleDetail> orderAuthHandleDetailList) throws IOException {
 		// TODO Auto-generated method stub
     	File file=new File(fullFilePath);
@@ -248,5 +241,5 @@ public class ExcelWriter {
          os.close();
         }
 	}
-	
+	*/
 }
