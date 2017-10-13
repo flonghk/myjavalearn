@@ -8,6 +8,6 @@ public class MapTest {
     void test1()
     {
         //Map map = new HashMap();
-        System.out.println("".equals(null));
+        System.out.println("".equals(""));
     }
 }
