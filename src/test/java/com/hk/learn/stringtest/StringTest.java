@@ -11,4 +11,10 @@ public class StringTest {
         System.out.println(s.equals(s1));
     }
 
+    @Test
+    void replace()
+    {
+        String ss ="\"1111\"";
+        System.out.println(ss.replaceAll("\"",""));
+    }
 }

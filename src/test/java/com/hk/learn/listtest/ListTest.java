@@ -1,11 +1,9 @@
 package com.hk.learn.listtest;
 
+import org.apache.commons.lang3.StringUtils;
 import org.testng.annotations.Test;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class ListTest {
@@ -17,6 +15,7 @@ public class ListTest {
         List list2 = new ArrayList<String>();
         list2.add("111");
         list.addAll(list2);
+        list.containsAll(list2);
         System.out.println(list.toString());
     }
 
@@ -27,7 +26,7 @@ public class ListTest {
         List list2 = new ArrayList<String>();
         list2.add("");
         list.add("");
-        System.out.println(list.contains(list2));
+        System.out.println(list.containsAll(list2));
     }
 
     @Test
@@ -62,5 +61,36 @@ public class ListTest {
         //System.out.println(list.stream().map(key -> h.get(key)));
     }
 
+    //去重
+    @Test
+    void removeDuplicateWithOrder()
+    {
+        List list = new ArrayList();
+        list.add("111111");
+        list.add("111111");
+        list.add("111111");
+        list.add("222222");
+        list.add("333333");
+        list.add("222222");
+        list.add("333333");
+        list.add("111111");
+        Set set = new HashSet();
+        List newList = new ArrayList();
+        for (Iterator iter = list.iterator(); iter.hasNext();) {
+            Object element = iter.next();
+            if (set.add(element))
+                newList.add(element);
+        }
+        list.clear();
+        list.addAll(newList);
+        System.out.println(" remove duplicate " + list);
+    }
 
+    @Test
+    void testStringUtils()
+    {
+        List listBA_1 = new ArrayList();
+        listBA_1.add("''");
+        System.out.println(StringUtils.join(listBA_1,","));
+    }
 }
