@@ -17,4 +17,18 @@ public class StringTest {
         String ss ="\"1111\"";
         System.out.println(ss.replaceAll("\"",""));
     }
+
+    @Test
+    void kongge()
+    {
+        String ss ="";
+        System.out.println("空格:"+String.valueOf(ss));
+    }
+
+    @Test
+    void subString()
+    {
+        String ss ="695-2017010677";
+        System.out.println(ss.substring(4));
+    }
 }
